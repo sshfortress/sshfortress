@@ -1,3 +1,3 @@
 # sshfortress
 
-Coming soon
+Try all SSHfortress features - free for 30 days
