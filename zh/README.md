@@ -33,6 +33,7 @@ jdk-8u172-linux-x64.tar.gz                         09-Jan-2020 11:22    182M
 sshfortress-1.6.1.sha512                           09-Jan-2020 16:14     155
 sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 ```
+### jdk
 
 ```
 # tar zxvf jdk-8u172-linux-x64.tar.gz -C /usr/local/
@@ -49,6 +50,20 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 # source /etc/profile
 ```
+
+### tomcat
+
+```
+# tar zxvf apache-tomcat-8.5.31.tar.gz -C /usr/local/
+# ln -s /usr/local/apache-tomcat-8.5.31/ /usr/local/tomcat
+# rm -rf /usr/local/tomcat/webapps/*
+# tar zxvf greatfortress.tar.gz -C /usr/local/tomcat/webapps
+# mv greatfortressframework.war  /usr/local/tomcat/webapps
+```
+
+### mysql 
+# yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install.noarch  bzip2
+
 ## 配置
 
 
