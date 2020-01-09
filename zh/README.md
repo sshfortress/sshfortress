@@ -23,7 +23,7 @@
 ## 功能
 
 ## 安装
-进入资源页按需下载即可，https://sshfortress.com/downloads/ 如果官网网络慢可到 https://github.com/sshfortress/sshfortress/releases进行下载
+进入资源页按需下载即可，https://sshfortress.com/downloads/  或者  https://github.com/sshfortress/sshfortress/releases  进行下载
 ```
 apache-tomcat-8.5.31.tar.gz                        09-Jan-2020 11:21      9M
 audit_sec.sql                                      09-Jan-2020 16:07     10M
@@ -36,11 +36,17 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 ```
 # tar zxvf jdk-8u172-linux-x64.tar.gz -C /usr/local/
+
 # ln -s /usr/local/jdk1.8.0_172/ /usr/local/jdk
+
 # echo "export JAVA_HOME=/usr/local/jdk" >> /etc/profile
+
 # echo "export JRE_HOME=/usr/local/jdk/jre" >> /etc/profile
+
 # echo "export CLASSPATH=.:\${JAVA_HOME}/lib:\${JRE_HOME}/lib:\${CLASSPATH}" >> /etc/profile
+
 # echo "export PATH=\${JAVA_HOME}/bin:\${JRE_HOME}/bin:/usr/local/mysql/bin:\${PATH}" >> /etc/profile
+
 # source /etc/profile
 ```
 ## 配置
