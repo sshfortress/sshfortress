@@ -8,11 +8,11 @@
 
 content
 ================
-* [依赖](#requirements)
-* [功能](#features)
-* [安装](#Installation)
-* [配置](#Configuration)
-* 使用](#HOWTOs)
+* [依赖](#依赖)
+* [功能](#功能)
+* [安装](#安装)
+* [配置](#配置)
+* 使用](#使用)
 
 ## 依赖
 
@@ -20,11 +20,11 @@ content
 2. jdk 1.8  <web>
 3. tomcat 8 <web>
 
-## Features
+## 功能
 
 RedisPushIptables is used to update firewall rules to reject the IP addresses for a specified amount of time or forever reject. however fail2ban relies on regular expressions. Once the application's log format has changed (the reason for the change may be due to version iteration), the filter needs to be reconfigured. RedisPushIptables does not have these concerns,it's used in the form of an API.
 
-## Configuration
+## 配置
 
 In order to test the module you are developing, you can load the module using the following redis.conf configuration directive:
 
@@ -66,7 +66,7 @@ Chain INPUT (policy ACCEPT)
 target     prot opt source               destination
 ```
 
-## Installation
+## 安装
 #### Installing Packages on Linux
 
 ```
