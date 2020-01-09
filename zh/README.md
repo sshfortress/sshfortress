@@ -40,7 +40,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 # echo "export CLASSPATH=.:\${JAVA_HOME}/lib:\${JRE_HOME}/lib:\${CLASSPATH}" >> /etc/profile
 # echo "export PATH=\${JAVA_HOME}/bin:\${JRE_HOME}/bin:/usr/local/mysql/bin:\${PATH}" >> /etc/profile
 # source /etc/profile
-
+```
 ## 配置
 
 
