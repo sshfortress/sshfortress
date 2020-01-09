@@ -62,8 +62,9 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 ```
 
 ### mysql 
+```
 # yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install.noarch  bzip2
-
+```
 ## 配置
 
 
