@@ -17,8 +17,8 @@ content
 ## 依赖
 
 1. mysql 5.6+ 
-2. jdk 1.8  <web>
-3. tomcat 8 <web>
+2. jdk 1.8  `web`
+3. tomcat 8 `web`
 
 ## 功能
 
