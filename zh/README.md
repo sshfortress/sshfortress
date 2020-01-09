@@ -22,11 +22,13 @@ content
 
 ## 功能
 
+## 安装
+
+
 ## 配置
 
 
-## 安装
-#### Installing Packages on Linux
+
 
 ## 使用
 
