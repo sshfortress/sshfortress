@@ -4,16 +4,17 @@
 
 尝试所有SSHfortress功能-免费30天
 
-This README is just a fast quick start document. 
+这个说明是介绍如何安装sshfortress系统，它有一个Web管理界面是用java实现的用来可示化的增加账号、资产等功能；后端是在openssh的基础上开发的功能，好了往下面看如何安装和配置吧。  
 
 content
 ================
-* [Requirements](#requirements)
-* [Features](#features)
-* [Configuration](#Configuration)
-* [HOWTOs](#HOWTOs)
-* [Installation](#Installation)
-## Requirements
+* [依赖](#requirements)
+* [功能](#features)
+* [安装](#Installation)
+* [配置](#Configuration)
+* 使用](#HOWTOs)
+
+## 依赖
 
 1. mysql 5.6+ 
 2. jdk 1.8  <web>
