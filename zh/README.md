@@ -47,12 +47,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 ### mysql 
 ```
 # yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install  bzip2 libtirpc-devel
-# wget https://github.com/sshfortress/sshfortress/releases/download/1.6.1/rpcsvc-proto-1.4.tar.gz
-# tar xf rpcsvc-proto-1.4.tar.gz
-# cd rpcsvc-proto-1.4
-# ./configure
-# make
-# make install
+
 # wget https://github.com/sshfortress/sshfortress/releases/download/1.6.1/mysql-5.7.16.tar.gz
 # wget https://github.com/sshfortress/sshfortress/releases/download/1.6.1/boost_1_59_0.tar.bz2
 # tar jxvf boost_1_59_0.tar.bz2 -C /tmp
