@@ -54,7 +54,21 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 # tar zxvf mysql-5.7.16.tar.gz
 # groupadd mysql；useradd -r -g mysql -s /bin/false -M mysql
 # cd mysql-5.7.16/
-# cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql     -DINSTALL_DATADIR=/usr/local/mysql/data     -DSYSCONFDIR=/usr/local/mysql/etc \     -DDEFAULT_CHARSET=utf8mb4     -DDEFAULT_COLLATION=utf8mb4_general_ci     -DEXTRA_CHARSETS=all     -USER=mysql                     \     -DWITH_MYISAM_STORAGE_ENGINE=1     -DWITH_INNOBASE_STORAGE_ENGINE=1     -DWITH_ARCHIVE_STORAGE_ENGINE=1                          \       -DWITH_BLACKHOLE_STORAGE_ENGINE=1     -DWITH_MEMORY_STORAGE_ENGINE=1      -DWITH_BOOST=/tmp/boost_1_59_0
+
+# cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+    -DINSTALL_DATADIR=/usr/local/mysql/data \
+    -DSYSCONFDIR=/usr/local/mysql/etc \
+    -DDEFAULT_CHARSET=utf8mb4 \
+    -DDEFAULT_COLLATION=utf8mb4_general_ci \
+    -DEXTRA_CHARSETS=all \
+    -USER=mysql \
+    -DWITH_MYISAM_STORAGE_ENGINE=1 \
+    -DWITH_INNOBASE_STORAGE_ENGINE=1 \
+    -DWITH_ARCHIVE_STORAGE_ENGINE=1  \
+    -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
+    -DWITH_MEMORY_STORAGE_ENGINE=1 \
+    -DWITH_BOOST=/tmp/boost_1_59_0
+    
 # make -j4; make install
 # chown -R mysql.mysql /usr/local/mysql
 # cp -f support-files/mysql.server /etc/init.d/mysqld
