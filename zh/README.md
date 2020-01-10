@@ -16,7 +16,7 @@
 
 ## 依赖
 
-1. mysql 5.6+ 
+1. mysql 5.7.16 
 2. jdk 1.8  
 3. tomcat 8 
 
