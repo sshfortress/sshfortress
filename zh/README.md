@@ -36,17 +36,11 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 ```
 # tar zxvf jdk-8u172-linux-x64.tar.gz -C /usr/local/
-
 # ln -s /usr/local/jdk1.8.0_172/ /usr/local/jdk
-
 # echo "export JAVA_HOME=/usr/local/jdk" >> /etc/profile
-
 # echo "export JRE_HOME=/usr/local/jdk/jre" >> /etc/profile
-
 # echo "export CLASSPATH=.:\${JAVA_HOME}/lib:\${JRE_HOME}/lib:\${CLASSPATH}" >> /etc/profile
-
 # echo "export PATH=\${JAVA_HOME}/bin:\${JRE_HOME}/bin:/usr/local/mysql/bin:\${PATH}" >> /etc/profile
-
 # source /etc/profile
 ```
 
@@ -67,7 +61,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 # tar xf rpcsvc-proto-1.4.tar.gz
 # cd rpcsvc-proto-1.4
 # ./configure
-#make
+# make
 # make install
 # groupadd mysql；useradd -r -g mysql -s /bin/false -M mysql
 # tar zxvf mysql-boost-5.7.28.tar.gz
