@@ -75,6 +75,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 [mysqld]
 log_bin_trust_function_creators=on
 explicit_defaults_for_timestamp=on
+sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # /etc/init.d/mysqld restart 
 
 
@@ -88,9 +89,12 @@ explicit_defaults_for_timestamp=on
 # rm -rf /usr/local/tomcat/webapps/*
 # tar zxvf greatfortress.tar.gz -C /usr/local/tomcat/webapps
 # sed -i 's/192.168.7.3/x.x.x.x/g' /usr/local/tomcat/webapps/greatfortress/common/layui/layui.js
+# /usr/local/tomcat/bin/catalina.sh run
+
 x.x.x.x 是你的监听地址
 http://x.x.x.x:8080/greatfortress  
 帐号：fortress  密码 hilookhere
+启动tomcat后，首次登录有点慢
 ```
 ## 配置
 
