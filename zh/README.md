@@ -55,7 +55,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 # make install
 # wget https://github.com/sshfortress/sshfortress/releases/download/1.6.1/mysql-5.7.16.tar.gz
 # wget https://github.com/sshfortress/sshfortress/releases/download/1.6.1/boost_1_59_0.tar.bz2
-# tar zxvf boost_1_59_0.tar.bz2 -C /tmp
+# tar jxvf boost_1_59_0.tar.bz2 -C /tmp
 # tar zxvf mysql-5.7.16.tar.gz
 # groupadd mysql；useradd -r -g mysql -s /bin/false -M mysql
 # cd mysql-5.7.16/
