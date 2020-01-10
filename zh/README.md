@@ -44,15 +44,6 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 # source /etc/profile
 ```
 
-### tomcat
-
-```
-# tar zxvf apache-tomcat-8.5.31.tar.gz -C /usr/local/
-# ln -s /usr/local/apache-tomcat-8.5.31/ /usr/local/tomcat
-# rm -rf /usr/local/tomcat/webapps/*
-# tar zxvf greatfortress.tar.gz -C /usr/local/tomcat/webapps
-```
-
 ### mysql 
 ```
 # yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install  bzip2 libtirpc-devel
@@ -87,6 +78,19 @@ explicit_defaults_for_timestamp=on
 # /etc/init.d/mysqld restart 
 
 
+```
+
+### tomcat
+
+```
+# tar zxvf apache-tomcat-8.5.31.tar.gz -C /usr/local/
+# ln -s /usr/local/apache-tomcat-8.5.31/ /usr/local/tomcat
+# rm -rf /usr/local/tomcat/webapps/*
+# tar zxvf greatfortress.tar.gz -C /usr/local/tomcat/webapps
+# sed -i 's/192.168.7.3/x.x.x.x/g' /usr/local/tomcat/webapps/greatfortress/common/layui/layui.js
+x.x.x.x 是你的监听地址
+http://x.x.x.x:8080/greatfortress  
+帐号：fortress  密码 hilookhere
 ```
 ## 配置
 
