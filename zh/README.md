@@ -67,7 +67,8 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 # mysql -uroot -p'SSHfortress123@' -e "create database audit_sec; use mysql;create user 'audit'@'127.0.0.1' identified by 'audit'; grant all privileges on audit_sec.* to 'audit'@'127.0.0.1';"
 
-# mysql -uroot -p'SSHfortress123@' -e 'set global log_bin_trust_function_creators=1; set global explicit_defaults_for_timestamp=1;'
+# mysql -uroot -p'SSHfortress123@' -e "set global log_bin_trust_function_creators=1; set global explicit_defaults_for_timestamp=1;set global sql_mode='STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION';"
+
 # mysql -uroot -p'SSHfortress123@' audit_sec  <audit_sec.sql
 
 为了防止每次重启失效，所以把它写入到配置文件中如下：
