@@ -83,7 +83,8 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 # mysql -uroot -p'SSHfortress123@' -e "create database audit_sec; use mysql;create user 'audit'@'127.0.0.1' identified by 'audit'; grant all privileges on audit_sec.* to 'audit'@'127.0.0.1';"
 
-# vim /etc/my
+# mysql -uroot -p'SSHfortress123@' -e 'set global log_bin_trust_function_creators=1; set global explicit_defaults_for_timestamp=1;'
+# mysql -uroot -p'SSHfortress123@' audit_sec  <audit_sec.sql
 
 
 ```
