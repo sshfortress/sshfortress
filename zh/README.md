@@ -16,7 +16,7 @@
 
 ## 依赖
 
-1. mysql 5.7.16  <需要与sshfortress使用的版本相同>
+1. mysql 5.7.16  <需要与sshfortress内置版本保持一致>
 2. jdk 1.8  
 3. tomcat 8 
 
