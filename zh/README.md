@@ -86,6 +86,13 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 # mysql -uroot -p'SSHfortress123@' -e 'set global log_bin_trust_function_creators=1; set global explicit_defaults_for_timestamp=1;'
 # mysql -uroot -p'SSHfortress123@' audit_sec  <audit_sec.sql
 
+为了防止每次重启失效，所以把它写入到配置文件中如下：
+#[root@centos8 local]# cat /etc/my.cnf 
+[mysqld]
+log_bin_trust_function_creators=on
+explicit_defaults_for_timestamp=on
+# /etc/init.d/mysqld restart 
+
 
 ```
 ## 配置
