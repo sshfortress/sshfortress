@@ -51,7 +51,6 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 # ln -s /usr/local/apache-tomcat-8.5.31/ /usr/local/tomcat
 # rm -rf /usr/local/tomcat/webapps/*
 # tar zxvf greatfortress.tar.gz -C /usr/local/tomcat/webapps
-# mv greatfortressframework.war  /usr/local/tomcat/webapps
 ```
 
 ### mysql 
