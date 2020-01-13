@@ -101,6 +101,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
  
  # echo "skip_ssl" >> /etc/my.cnf.d/mysql-server.cnf
  # echo "log_bin_trust_function_creators=on" >> /etc/my.cnf.d/mysql-server.cnf
+ # echo "explicit_defaults_for_timestamp=on" >> /etc/my.cnf.d/mysql-server.cnf
  # echo "sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES" >> /etc/my.cnf.d/mysql-server.cnf
  
  # systemctl restart mysqld
