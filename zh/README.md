@@ -46,6 +46,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 ### mysql 
 ```
+选项1： 源码编译
 # yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install  bzip2 libtirpc-devel
 
 # wget https://github.com/sshfortress/sshfortress/releases/download/1.6.1/mysql-5.7.16.tar.gz
@@ -93,7 +94,17 @@ explicit_defaults_for_timestamp=on
 sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # /etc/init.d/mysqld restart 
 
+选项2： YUM安装 这里以8.0为例
 
+ # yum install mysql-server
+ 
+ # echo "skip_ssl" >> /etc/my.cnf.d/mysql-server.cnf
+ # echo "log_bin_trust_function_creators=on" >> /etc/my.cnf.d/mysql-server.cnf
+ # systemctl restart mysqld
+ # mysql -e "create user audit@'127.0.0.1' identified  by 'audit'; grant all privileges on *.* to audit@'127.0.0.1' with grant option;"
+ # mysql -e "create database audit_sec;"
+ # mysql audit_sec < audit_sec.sql
+ 
 ```
 
 ### tomcat
