@@ -16,7 +16,7 @@
 
 ## 依赖
 
-1. mysql 5.7.16  <需要与sshfortress内置版本保持一致>
+1. mysql 5.7+  
 2. jdk 1.8  
 3. tomcat 8 
 
@@ -78,7 +78,8 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 # mysql -uroot -p'NiBMcstse9!i' --connect-expired-password -e "alter user 'root'@'localhost' identified by 'SSHfortress123@';CREATE USER 'sshfortress'@'%' IDENTIFIED BY 'SSHfortress123@';GRANT ALL PRIVILEGES ON *.* TO 'sshfortress'@'%' IDENTIFIED BY 'SSHfortress123@' WITH GRANT OPTION MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;flush privileges;"
 
 # mysql -uroot -p'SSHfortress123@' -e "create database audit_sec; use mysql;create user 'audit'@'127.0.0.1' identified by 'audit'; grant all privileges on audit_sec.* to 'audit'@'127.0.0.1';"
-
+######## 5.7需要设置log_bin_trust_function_creators、explicit_defaults_for_timestamp和sql_mode  
+######## 8.0只需设置log_bin_trust_function_creators=1
 # mysql -uroot -p'SSHfortress123@' -e "set global log_bin_trust_function_creators=1; set global explicit_defaults_for_timestamp=1;set global sql_mode='STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION';"
 
 # mysql -uroot -p'SSHfortress123@' audit_sec  <audit_sec.sql
