@@ -45,8 +45,9 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 ```
 
 ### mysql 
+
+### 选项1： 源码编译
 ```
-选项1： 源码编译
 # yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install  bzip2 libtirpc-devel
 
 # wget https://github.com/sshfortress/sshfortress/releases/download/1.6.1/mysql-5.7.16.tar.gz
@@ -82,6 +83,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 ######## 5.7需要设置log_bin_trust_function_creators、explicit_defaults_for_timestamp和sql_mode  
 ######## 8.0只需设置log_bin_trust_function_creators=1
+
 # mysql -uroot -p'SSHfortress123@' -e "set global log_bin_trust_function_creators=1; set global explicit_defaults_for_timestamp=1;set global sql_mode='STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION';"
 
 # mysql -uroot -p'SSHfortress123@' audit_sec  <audit_sec.sql
@@ -93,8 +95,9 @@ log_bin_trust_function_creators=on
 explicit_defaults_for_timestamp=on
 sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # /etc/init.d/mysqld restart 
-
-选项2： YUM安装 这里以8.0为例
+```
+### 选项2： YUM安装 这里以8.0为例
+```
 
  # yum install mysql-server
  
