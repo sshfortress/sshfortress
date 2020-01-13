@@ -16,7 +16,7 @@
 
 ## 依赖
 
-1. mysql 5.7+  <但是java端spring 不支持太高的版本>
+1. mysql 5.6+  
 2. jdk 1.8  
 3. tomcat 8 
 
