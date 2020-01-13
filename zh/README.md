@@ -81,8 +81,6 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 # mysql -uroot -p'SSHfortress123@' -e "create database audit_sec; use mysql;create user 'audit'@'127.0.0.1' identified by 'audit'; grant all privileges on audit_sec.* to 'audit'@'127.0.0.1';"
 
-######## 5.7需要设置log_bin_trust_function_creators、explicit_defaults_for_timestamp和sql_mode  
-######## 8.0只需设置log_bin_trust_function_creators=1
 
 # mysql -uroot -p'SSHfortress123@' -e "set global log_bin_trust_function_creators=1; set global explicit_defaults_for_timestamp=1;set global sql_mode='STRICT_TRANS_TABLES,NO_ENGINE_SUBSTITUTION';"
 
@@ -103,6 +101,8 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
  
  # echo "skip_ssl" >> /etc/my.cnf.d/mysql-server.cnf
  # echo "log_bin_trust_function_creators=on" >> /etc/my.cnf.d/mysql-server.cnf
+ # echo "sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES" >> /etc/my.cnf.d/mysql-server.cnf
+ 
  # systemctl restart mysqld
  # mysql -e "create user audit@'127.0.0.1' identified  by 'audit'; grant all privileges on *.* to audit@'127.0.0.1' with grant option;"
  # mysql -e "create database audit_sec;"
