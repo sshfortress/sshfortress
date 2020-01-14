@@ -118,7 +118,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # rm -rf /usr/local/tomcat/webapps/*
 # tar zxvf greatfortress.tar.gz -C /usr/local/tomcat/webapps
 # sed -i 's/192.168.7.3/x.x.x.x/g' /usr/local/tomcat/webapps/greatfortress/common/layui/layui.js
-# /usr/local/tomcat/bin/catalina.sh run
+# /usr/local/tomcat/bin/catalina.sh start
 
 x.x.x.x 是你的监听地址
 http://x.x.x.x:8080/greatfortress  
