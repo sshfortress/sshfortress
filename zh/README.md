@@ -54,7 +54,12 @@ WantedBy=multi-user.target
 ```
 # systemctl daemon-reload
 # systemctl enable rc-local
+# chmod +x /etc/rc.local
 # echo "/usr/local/openssh2233/sbin/sshd" >> /etc/rc.local
+
+友情提示centos8开始启用了nftables而不是iptables，如果你不熟悉规则的添加，最好清空规则
+
+# nft flush ruleset
  ```
 ## 功能
 
