@@ -54,7 +54,7 @@ WantedBy=multi-user.target
 ```
 # systemctl daemon-reload
 # systemctl enable rc-local
-# echo " /usr/local/openssh2233/sbin/sshd" >> /etc/rc.local
+# echo "/usr/local/openssh2233/sbin/sshd" >> /etc/rc.local
  ```
 ## 功能
 
