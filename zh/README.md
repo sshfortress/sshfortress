@@ -65,7 +65,7 @@ apache-tomcat-8.5.31.tar.gz                        09-Jan-2020 11:21      9M
 audit_sec.sql                                      09-Jan-2020 16:07     10M
 greatfortress.tar.gz                               10-Jan-2020 09:52     65M
 jdk-8u172-linux-x64.tar.gz                         09-Jan-2020 11:22    182M
-sshfortress-1.6.1.sha512                           09-Jan-2020 16:14     155
+sshfortress-1.6.1.sha256                           09-Jan-2020 16:14     155
 sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 ```
 ### jdk
