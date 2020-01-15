@@ -133,6 +133,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 log_bin_trust_function_creators=on
 explicit_defaults_for_timestamp=on
 sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+# systemctl enable mysqld
 # /etc/init.d/mysqld restart 
 ```
 ### 选项2： YUM安装 这里以8.0为例
@@ -145,6 +146,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
  # echo "explicit_defaults_for_timestamp=on" >> /etc/my.cnf.d/mysql-server.cnf
  # echo "sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES" >> /etc/my.cnf.d/mysql-server.cnf
  
+ # systemctl enable mysqld
  # systemctl restart mysqld
  # mysql -e "create user audit@'127.0.0.1' identified  by 'audit'; grant all privileges on *.* to audit@'127.0.0.1' with grant option;"
  # mysql -e "create database audit_sec;"
