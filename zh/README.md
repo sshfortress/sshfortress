@@ -18,7 +18,44 @@
 1. mysql 5.6+  
 2. jdk 1.8  
 3. tomcat 8 
+4. sshfortress
 
+## 注意
+sshfortress将接管22端口，所以在这之前你需要另外编译安装一个openssh并监听其他端口（22端口以外）以便你远程连接
+https://openbsd.hk/pub/OpenBSD/OpenSSH/portable/
+```
+# wget https://openbsd.hk/pub/OpenBSD/OpenSSH/portable/openssh-8.1p1.tar.gz
+# tar zxvf openssh-8.1p1.tar.gz
+# cd openssh-8.1p1/
+# ./configure --prefix=/usr/local/openssh2233
+# make -j4; make install
+# sed -i '1i\Port 2233' /usr/local/openssh2233/etc/sshd_config
+# sed -i '2i\PermitRootLogin yes' /usr/local/openssh2233/etc/sshd_config
+# /usr/local/openssh2233/sbin/sshd
+```
+可以创建一个开机启动项 rc-local在centos7以前是加载的，之后不再开机加载了，现在我们打开它
+```
+[root@centos8 tmp]# cat /usr/lib/systemd/system/rc-local.service 
+[Unit]
+Description=/etc/rc.local
+ConditionPathExists=/etc/rc.local
+ 
+[Service]
+Type=forking
+ExecStart=/etc/rc.local start
+TimeoutSec=0
+StandardOutput=tty
+RemainAfterExit=yes
+SysVStartPriority=99
+ 
+[Install]
+WantedBy=multi-user.target
+```
+```
+# systemctl daemon-reload
+# systemctl enable rc-local
+# echo " /usr/local/openssh2233/sbin/sshd" >> /etc/rc.local
+ ```
 ## 功能
 
 ## 安装
@@ -125,7 +162,11 @@ http://x.x.x.x:8080/greatfortress
 帐号：fortress  密码 hilookhere
 启动tomcat后，首次登录有点慢
 ```
+### sshfortress
+```
+# tar zxvf sshfortress-x.x.x.tar.gz
+# cd sshfortress-x.x.x
+# ./install.sh
+```
 
-## 注意
-sshfortress将接管22端口，所以在这之前你需要另外编译安装一个openssh并监听其他端口（22端口以外）以便你远程连接
 
