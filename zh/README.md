@@ -13,6 +13,7 @@
 * [注意](#注意)
 * [依赖](#依赖)
 * [安装](#安装)
+* [视频](#视频)
 
 
 ## 产品简介
@@ -219,4 +220,6 @@ http://x.x.x.x:8080/greatfortress
 # ./install.sh
 ```
 
+## 演示视频
+[![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
