@@ -9,17 +9,38 @@ This description is to introduce how to install the sshfortress system. It has a
 
 Contents
 ================
-* [Depend](#Depend)
+* [Product introduction](#Product_introduction)
 * [Features](#Features)
-* [Installation](#Installation)
 * [Notice](#Notice)
+* [Depend](#Depend)
+* [Installation](#Installation)
 
-## Depend
-0. glibc 2.17+
-1. mysql 5.6+  
-2. jdk 1.8  
-3. tomcat 8 
-4. sshfortress
+## Product_introduction
+The sshfortress fortress machine integrates various functions such as operation and maintenance identity authentication, account management and control, and system operation audit. Based on the implementation of the protocol **Reverse Proxy**, the data flow of the SSH, SCP, and SFTP protocols is recorded through **Reverse Proxy**. Unified operation and maintenance entrances, unified permissions between users and hosting accounts to prevent internal data leakage.
+
+## Features
+The bastion machine has functions such as operation audit, authority management and control, safety certification, and efficient operation and maintenance.Power group management: Establish authorization management of personnel responsibilities and resource allocation according to personnel, departmental organizations, and resource groups.
+
+* Operational audit
+
+Multi-faceted operation and maintenance personnel's operation behavior is used as the basis for incident traceability and accident analysis.
+
+Operation and maintenance operation records: Detailed records of operation errors, malicious operations, and unauthorized operations.
+Linux command auditing: Extractable command character auditing.
+File transfer audit: Support remote desktop file transfer, SFTP original file audit.
+
+* Authority control
+
+Through account management and authority group management, the division of powers to manage personnel and assets is achieved.
+
+Account management and control: There is only one operation and maintenance account, which solves problems such as shared accounts, temporary accounts, and abuse of permissions.
+
+* Efficient
+
+Native implementation, **does not change user usage habits**.
+C/S architecture operation and maintenance access: Supports SSH, SCP, SFTP protocols.
+Multi-operation and maintenance tools: Support PuTTY, SecureCRT, Xshell and other tools.
+
 
 ## Notice
 sshfortress will take over port 22, so before this you need to compile and install another openssh and listen to other ports (other than port 22) so that you can connect remotely
@@ -62,7 +83,12 @@ Friendly reminder centos8 starts to enable nftables instead of iptables. If you 
 
 # nft flush ruleset
  ```
-## Features
+## Depend
+0. glibc 2.17+
+1. mysql 5.6+  
+2. jdk 1.8  
+3. tomcat 8 
+4. sshfortress
 
 ## Installation
 Enter the resource page and download as needed, https://sshfortress.com/downloads/ or https://github.com/sshfortress/sshfortress/releases to download
@@ -88,7 +114,8 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 ### mysql 
 
-### option 1： Source compilation
+* option 1： Source compilation
+
 ```
 # yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install  bzip2 libtirpc-devel
 
@@ -137,7 +164,8 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # systemctl enable mysqld
 # /etc/init.d/mysqld restart 
 ```
-### Option 2： YUM install , Here take mysql 8.0 as an example
+* Option 2： YUM install , Here take mysql 8.0 as an example
+
 ```
 
  # yum install mysql-server
