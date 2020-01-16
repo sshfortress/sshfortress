@@ -209,5 +209,5 @@ After starting tomcat, the first login is a bit slow
 ```
 
 ## Video
-[![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/demo.jpeg)](https://sshfortress.com/en/video.html)
+[![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
