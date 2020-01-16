@@ -12,7 +12,7 @@ Contents
 * [Depend](#Depend)
 * [Features](#Features)
 * [Installation](#Installation)
-* [notice](#notice)
+* [Notice](#Notice)
 
 ## Depend
 0. glibc 2.17+
@@ -21,7 +21,7 @@ Contents
 3. tomcat 8 
 4. sshfortress
 
-## Depend
+## Notice
 sshfortress will take over port 22, so before this you need to compile and install another openssh and listen to other ports (other than port 22) so that you can connect remotely
 https://openbsd.hk/pub/OpenBSD/OpenSSH/portable/
 ```
