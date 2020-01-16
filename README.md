@@ -22,7 +22,7 @@ Contents
 4. sshfortress
 
 ## Depend
-sshfortress将接管22端口，所以在这之前你需要另外编译安装一个openssh并监听其他端口（22端口以外）以便你远程连接
+sshfortress will take over port 22, so before this you need to compile and install another openssh and listen to other ports (other than port 22) so that you can connect remotely
 https://openbsd.hk/pub/OpenBSD/OpenSSH/portable/
 ```
 # wget https://openbsd.hk/pub/OpenBSD/OpenSSH/portable/openssh-8.1p1.tar.gz
@@ -34,7 +34,7 @@ https://openbsd.hk/pub/OpenBSD/OpenSSH/portable/
 # sed -i '2i\PermitRootLogin yes' /usr/local/openssh2233/etc/sshd_config
 # /usr/local/openssh2233/sbin/sshd
 ```
-可以创建一个开机启动项 rc-local在centos7以前是加载的，之后不再开机加载了，现在我们打开它
+You can create a boot startup item rc-local was loaded before centos7, and then no longer loaded at boot time, now we open it
 ```
 [root@centos8 tmp]# cat /usr/lib/systemd/system/rc-local.service 
 [Unit]
@@ -58,7 +58,7 @@ WantedBy=multi-user.target
 # chmod +x /etc/rc.local
 # echo "/usr/local/openssh2233/sbin/sshd" >> /etc/rc.local
 
-友情提示centos8开始启用了nftables而不是iptables，如果你不熟悉规则的添加，最好清空规则
+Friendly reminder centos8 starts to enable nftables instead of iptables. If you are not familiar with the addition of rules, it is best to clear the rules
 
 # nft flush ruleset
  ```
