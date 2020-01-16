@@ -27,6 +27,7 @@ sshfortress堡垒机集中了运维身份鉴别、账号管控、系统操作审
 * 操作审计
 
 多面记录运维人员的操作行为，作为事件追溯的保障和事故分析的依据。
+
 运维操作记录： 操作失误、恶意操作、越权操作详细记录。
 Linux命令审计： 可提取命令符审计。
 文件传输审计： 支持远程桌面文件传输、SFTP的原文件审计。
@@ -127,7 +128,8 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 ### mysql 
 
-##### 选项1： 源码编译
+*  选项1： 源码编译
+
 ```
 # yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install  bzip2 libtirpc-devel
 
@@ -176,7 +178,8 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # systemctl enable mysqld
 # /etc/init.d/mysqld restart 
 ```
-##### 选项2： YUM安装 这里以8.0为例
+* 选项2： YUM安装 这里以8.0为例
+
 ```
 
  # yum install mysql-server
