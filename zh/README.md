@@ -44,7 +44,7 @@ Linux命令审计： 可提取命令符审计。
 原生实现，**不改变用户使用习惯**。
 
 C/S架构运维接入： 支持SSH、SCP、SFTP协议。
-多运维工具： 支持PuTTY、SecureCRT、Xshell、WinSCP。
+多运维工具： 支持PuTTY、SecureCRT、Xshell等工具。
 
 
 
