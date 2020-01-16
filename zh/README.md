@@ -183,7 +183,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # systemctl enable mysqld
 # /etc/init.d/mysqld restart 
 ```
-* 选项2： YUM安装 这里以8.0为例
+* 选项2： YUM安装 这里以mysql 8.0为例
 
 ```
 
