@@ -14,7 +14,7 @@ Contents
 * [Notice](#Notice)
 * [Depend](#Depend)
 * [Installation](#Installation)
-* [Video](#Video]
+* [Video](#Video)
 
 ## Product_introduction
 The sshfortress fortress machine integrates various functions such as operation and maintenance identity authentication, account management and control, and system operation audit. Based on the implementation of the protocol **Reverse Proxy**, the data flow of the SSH, SCP, and SFTP protocols is recorded through **Reverse Proxy**. Unified operation and maintenance entrances, unified permissions between users and hosting accounts to prevent internal data leakage.
