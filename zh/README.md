@@ -117,7 +117,7 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 
 ### mysql 
 
-### 选项1： 源码编译
+#### 选项1： 源码编译
 ```
 # yum -y install make gcc-c++ cmake bison-devel bison  ncurses-devel libgnomeui-devel perl-Module-Install  bzip2 libtirpc-devel
 
@@ -166,7 +166,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # systemctl enable mysqld
 # /etc/init.d/mysqld restart 
 ```
-### 选项2： YUM安装 这里以8.0为例
+#### 选项2： YUM安装 这里以8.0为例
 ```
 
  # yum install mysql-server
