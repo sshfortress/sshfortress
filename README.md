@@ -87,7 +87,7 @@ Friendly reminder centos8 starts to enable nftables instead of iptables. If you 
  ```
 ## Depend
 0. glibc 2.17+
-1. mysql 5.6+  
+1. mysql 5.6+   or MariaDB
 2. jdk 1.8  
 3. tomcat 8 
 4. sshfortress
