@@ -184,7 +184,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
  # mysql audit_sec < audit_sec.sql
  
 ```
-* Option 3： APT install , Here take debian 9.9.0 MariaDB 10.1.41  as an example
+* Option 3： APT install , Here take Debian 9.9.0 MariaDB 10.1.41 as an example
 
 ```
 # apt-get install mysql-server 
