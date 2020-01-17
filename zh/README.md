@@ -101,7 +101,7 @@ WantedBy=multi-user.target
  
 ## 依赖
 0. glibc 2.17+
-1. mysql 5.6+  
+1. mysql 5.6+   or MariaDB
 2. jdk 1.8  
 3. tomcat 8 
 4. sshfortress
@@ -201,7 +201,17 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
  # mysql audit_sec < audit_sec.sql
  
 ```
-
+ * 选项3： APT安装 这里以Debian 9.9.0  MariaDB 10.1.41为例
+ 
+ ```
+ # apt-get install mysql-server 
+ # systemctl enable mysqld
+ # systemctl restart mysqld
+ # mysql -e "create user audit@'127.0.0.1' identified  by 'audit'; grant all privileges on *.* to audit@'127.0.0.1' with grant option;"
+ # mysql -e "create database audit_sec;"
+ # mysql audit_sec < audit_sec.sql
+ ```
+ 
 ### tomcat
 
 ```
