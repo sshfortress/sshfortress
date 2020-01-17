@@ -205,8 +205,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
  
  ```
  # apt-get install mysql-server 
- # systemctl enable mysqld
- # systemctl restart mysqld
+ # systemctl enable mariadb
  # mysql -e "create user audit@'127.0.0.1' identified  by 'audit'; grant all privileges on *.* to audit@'127.0.0.1' with grant option;"
  # mysql -e "create database audit_sec;"
  # mysql audit_sec < audit_sec.sql
