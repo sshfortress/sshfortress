@@ -17,7 +17,7 @@ Contents
 * [Video](#Video)
 
 ## Product_introduction
-The sshfortress fortress machine integrates various functions such as operation and maintenance identity authentication, account management and control, and system operation audit. Based on the implementation of the protocol **Reverse Proxy**, the data flow of the SSH, SCP, and SFTP protocols is recorded through **Reverse Proxy**. Unified operation and maintenance entrances, unified permissions between users and hosting accounts to prevent internal data leakage.
+The ssh fortress machine integrates various functions such as operation and maintenance identity authentication, account management and control, and system operation audit. Based on the implementation of the protocol **Reverse Proxy**, the data flow of the SSH, SCP, and SFTP protocols is recorded through **Reverse Proxy**. Unified operation and maintenance entrances, unified permissions between users and hosting accounts to prevent internal data leakage.
 
 ## Features
 The bastion machine has functions such as operation audit, authority management and control, safety certification, and efficient operation and maintenance.Power group management: Establish authorization management of personnel responsibilities and resource allocation according to personnel, departmental organizations, and resource groups.
