@@ -234,5 +234,7 @@ http://x.x.x.x:8080/greatfortress
 ```
 
 ## 演示视频
+**https://sshfortress.com/en/video.html**
+
 [![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
