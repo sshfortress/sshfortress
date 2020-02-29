@@ -4,7 +4,7 @@
 
 尝试所有SSHfortress功能-免费30天
 
-另外，我们提供社区版、专业版和教育版，社区版完全免费,用户无须注册和授权文件。
+另外，我们提供社区版、专业版和教育版，社区版完全免费,用户无须注册和授权文件，[版本区别](https://sshfortress.com/cn/community.html)。
 
 这个说明是介绍如何安装sshfortress系统，它有一个Web管理界面greatfortress是用java实现的用来可示化的增加账号、资产等功能；后端sshfortress是在openssh的基础上开发的功能，好了往下面看如何安装和配置吧。  
 
