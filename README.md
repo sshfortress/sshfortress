@@ -4,7 +4,7 @@
 
 Try all SSHfortress features - free for 30 days
 
-We provide community edition, professional edition and education edition, community edition is completely free.
+We provide community edition, professional edition and education edition, community edition is completely free, [version differences](https://sshfortress.com/en/community.html).
 
 
 This description is to introduce how to install the sshfortress system. It has a web management interface, greatfortress, which is implemented in java to visually increase functions such as accounts and assets. The backend sshfortress is a function developed on the basis of openssh. Let's see how to install and configure it.  
