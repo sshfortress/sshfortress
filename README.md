@@ -28,13 +28,13 @@ The bastion machine has functions such as operation audit, authority management 
 
 Multi-faceted operation and maintenance personnel's operation behavior is used as the basis for incident traceability and accident analysis.
 
-Operation and maintenance operation records: Detailed records of operation errors, malicious operations, and unauthorized operations.
+**Operation and maintenance operation records:** Detailed records of operation errors, malicious operations, and unauthorized operations.
 
-Linux command auditing: Extractable command character auditing.
+**Linux command auditing:** Extractable command character auditing.
 
-File transfer audit: Support remote desktop file transfer, SFTP original file audit.
+**File transfer audit:** Support remote desktop file transfer, SFTP original file audit.
 
-Terminal recording playback: Support terminal recording ssh operation process, fully compatible with the scriptreplay tool that comes with Linux for playback.
+**Terminal recording playback:** Support terminal recording ssh operation process, fully compatible with the scriptreplay tool that comes with Linux for playback.
 
 * Authority control
 
