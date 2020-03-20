@@ -34,7 +34,7 @@ Multi-faceted operation and maintenance personnel's operation behavior is used a
 
 **File transfer audit:** Support remote desktop file transfer, SFTP original file audit.
 
-**Terminal recording playback:** Support terminal recording ssh operation process, fully compatible with the scriptreplay tool that comes with Linux for playback.
+**Terminal recording playback:** Support terminal recording ssh operation process, fully compatible with the scriptreplay tool that comes with Linux for playback. Playback file storage path ```/var/log/sshfortress_playback```, classified by year, month, and day.
 
 * Authority control
 
