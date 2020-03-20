@@ -21,7 +21,7 @@
 ## 产品简介
 
 sshfortress堡垒机集中了运维身份鉴别、账号管控、系统操作审计等多种功能。基于协议**反向代理**实现，通过**反向代理**的方式实现对 SSH 、SCP 及 SFTP 协议的数据流进行全程记录。统一运维入口，统一用户与主机帐号间的权限关系，防止内部数据泄密。
-[![Comparison chart](https://github.com/sshfortress/sshfortress/blob/master/zh/Comparison%20chart.jpg)]
+![Comparison chart](https://github.com/sshfortress/sshfortress/blob/master/zh/Comparison%20chart.jpg)
 
 
 ## 功能
