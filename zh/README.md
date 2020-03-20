@@ -16,6 +16,7 @@
 * [依赖](#依赖)
 * [安装](#安装)
 * [演示视频](#演示视频)
+* [如何使用](#如何使用)
 
 
 ## 产品简介
@@ -235,6 +236,15 @@ http://x.x.x.x:8080/greatfortress
 # tar zxvf sshfortress-x.x.x.tar.gz
 # cd sshfortress-x.x.x
 # ./install.sh
+```
+## 如何使用
+
+登录名加两个减号加资产号
+Example: 
+```
+ssh name--ID@x.x.x.x 
+scp ll.jpg name--ID@x.x.x.x:/tmp
+sftp name--ID@x.x.x.
 ```
 
 ## 演示视频
