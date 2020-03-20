@@ -224,7 +224,15 @@ After starting tomcat, the first login is a bit slow
 # cd sshfortress-x.x.x
 # ./install.sh
 ```
+## How to use
 
+Asset number plus two minus signs
+Example: 
+```
+ssh name--ID@x.x.x.x 
+scp ll.jpg name--ID@x.x.x.x:/tmp
+sftp name--ID@x.x.x.
+```
 ## Video
 **https://sshfortress.com/en/video.html**
 
