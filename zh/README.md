@@ -239,7 +239,7 @@ http://x.x.x.x:8080/greatfortress
 ```
 ## 如何使用
 
-登录名加两个减号加资产号
+登录名加两个减号加资产ID
 Example: 
 ```
 ssh name--ID@x.x.x.x 
