@@ -37,7 +37,7 @@ sshfortress堡垒机集中了运维身份鉴别、账号管控、系统操作审
 
 **文件传输审计：** 支持远程桌面文件传输、SFTP的原文件审计。
 
-**终端录制回放：** 支持终端录制ssh操作过程,完全兼容linux自带工具scriptreplay进行回放。回放文件存放路径```/var/log/sshfortress_playback```目录，按年月日归类。
+**终端录制回放：** 支持终端录制ssh操作过程,完全兼容linux自带工具scriptreplay进行回放。回放文件存放路径```/var/log/sshfortress_playback```，按年月日归类。
 
 * 职权管控
 
