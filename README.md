@@ -227,7 +227,7 @@ After starting tomcat, the first login is a bit slow
 ```
 ## How-to-use
 
-Asset number plus two minus signs
+Login name plus two minus signs plus asset number
 Example: 
 ```
 ssh name--ID@x.x.x.x 
