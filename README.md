@@ -38,6 +38,11 @@ Multi-faceted operation and maintenance personnel's operation behavior is used a
 
 **Terminal recording playback:** Support terminal recording ssh operation process, fully compatible with the scriptreplay tool that comes with Linux for playback. Playback file storage path ```/var/log/sshfortress_playback```, classified by year, month, and day.
 
+example: 
+```
+#cd /var/log/sshfortress_playback/2020/03/24
+# scriptreplay test-10.13.49.time test-10.13.49.log   
+```
 * Authority control
 
 Through account management and authority group management, the division of powers to manage personnel and assets is achieved.
