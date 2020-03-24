@@ -41,6 +41,12 @@ sshfortress堡垒机集中了运维身份鉴别、账号管控、系统操作审
 
 **终端录制回放：** 支持终端录制ssh操作过程,完全兼容linux自带工具scriptreplay进行回放。回放文件存放路径```/var/log/sshfortress_playback```，按年月日归类。
 
+example: 
+```
+#cd /var/log/sshfortress_playback/2020/03/24
+# scriptreplay test-10.13.49.time test-10.13.49.log   
+```
+
 * 职权管控
 
 通过账号管控和权限组管理，实现分职权进行人员和资产的管理。
