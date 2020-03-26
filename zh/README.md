@@ -271,8 +271,11 @@ sftp name--ID@x.x.x.x
 ssh today--58@192.168.7.3
 scp ll.jpg today--58@192.168.7.3:/tmp
 sftp today--58@192.168.7.3
+
 假设这个资产组还有其他资产，如ID为59,60,61等
 那么登录方式不变，只需要更改资产ID即可,
+
+
 ssh today--59@192.168.7.3
 
 ssh today--60@192.168.7.3
