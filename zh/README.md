@@ -245,13 +245,37 @@ http://x.x.x.x:8080/greatfortress
 # ./install.sh
 ```
 ## 如何使用
+第一步：
+建立资产
+![1](https://github.com/sshfortress/sshfortress/blob/master/zh/1.png)
 
-登录名加两个减号加资产ID
+录入服务器的账号和密码，可以多个，如root tomcat test用户
+![2](https://github.com/sshfortress/sshfortress/blob/master/zh/2.jpg)
+
+建立资产组勾选即可
+![3](https://github.com/sshfortress/sshfortress/blob/master/zh/3.jpg)
+
+建立SSH授权账号
+![4](https://github.com/sshfortress/sshfortress/blob/master/zh/4.jpg)
+
+
+登录名加两个减号加资产ID，
 Example: 
 ```
 ssh name--ID@x.x.x.x 
 scp ll.jpg name--ID@x.x.x.x:/tmp
-sftp name--ID@x.x.x.
+sftp name--ID@x.x.x.x 
+
+如授权账号为today 资产ID为58,堡垒机的IP为192.168.7.3,一个授权账号只能对应一个组，而一个组里可以对应多个资产
+
+ssh today--58@192.168.7.3
+scp ll.jpg today--58@192.168.7.3:/tmp
+sftp today--58@192.168.7.3
+假设这个资产组还有其他资产，如ID为59,60,61等
+那么登录方式不变，只需要更改资产ID即可,
+ssh today--59@192.168.7.3
+
+ssh today--60@192.168.7.3
 ```
 
 ## 演示视频
