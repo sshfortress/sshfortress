@@ -18,6 +18,7 @@ Contents
 * [Installation](#Installation)
 * [Video](#Video)
 * [How to use](#How-to-use)
+* [Upgrade](#Upgrade)
 
 ## Product_introduction
 The ssh fortress machine integrates various functions such as operation and maintenance identity authentication, account management and control, and system operation audit. Based on the implementation of the protocol **Reverse Proxy**, the data flow of the SSH, SCP, and SFTP protocols is recorded through **Reverse Proxy**. Unified operation and maintenance entrances, unified permissions between users and hosting accounts to prevent internal data leakage.
@@ -244,3 +245,5 @@ sftp name--ID@x.x.x.
 
 [![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
+## Upgrade
+The sshfortress upgrade just needs to replace the files with changes, it doesn't need to upgrade all of them, it usually just needs to upgrade the sshhd files and restart the service afterwards. ```/etc/init.d/sshd.init restart```
