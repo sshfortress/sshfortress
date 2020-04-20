@@ -47,6 +47,10 @@ example:
 #cd /var/log/sshfortress_playback/2020/03/24
 # scriptreplay test-10.13.49.time test-10.13.49.log   
 ```
+如果硬盘空间不大，建议只保存30天即可，可使用crontab清理
+
+```echo "00 00 * * *     root find /var/log/sshfortress_playback/ -mtime +30 -exec rm -rf {} \;" >> /etc/crontab```
+
 
 * 职权管控
 
