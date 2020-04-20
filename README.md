@@ -252,4 +252,4 @@ sftp name--ID@x.x.x.
 [![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
 ## Upgrade
-The sshfortress upgrade just needs to replace the files with changes, it doesn't need to upgrade all of them, it usually just needs to upgrade the sshhd files and restart the service afterwards. ```/etc/init.d/sshd.init restart```
+The sshfortress upgrade just needs to replace the files with changes, it doesn't need to upgrade all of them, it usually just needs to upgrade the sshd,ssh files and restart the service afterwards. ```/etc/init.d/sshd.init restart```
