@@ -299,4 +299,4 @@ ssh today--60@192.168.7.3
 [![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
 ## 如何升级
-sshfortress升级只需要替换掉有变化的文件即可，不需要所有的都升级，通常只需要sshd文件升级即可，之后重启服务即可。```/etc/init.d/sshd.init restart```
+sshfortress升级只需要替换掉有变化的文件即可，不需要所有的都升级，通常只需要sshd,ssh文件升级即可，之后重启服务即可。```/etc/init.d/sshd.init restart```
