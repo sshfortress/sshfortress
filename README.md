@@ -44,6 +44,12 @@ example:
 #cd /var/log/sshfortress_playback/2020/03/24
 # scriptreplay test-10.13.49.time test-10.13.49.log   
 ```
+
+If you don't have much space on your hard drive, it's recommended that you only keep it for 30 days, which can be cleaned using crontab
+
+```echo "00 00 * * *     root find /var/log/sshfortress_playback/ -mtime +30 -exec rm -rf {} \;" >> /etc/crontab```
+
+
 * Authority control
 
 Through account management and authority group management, the division of powers to manage personnel and assets is achieved.
