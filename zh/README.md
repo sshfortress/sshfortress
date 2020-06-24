@@ -118,7 +118,7 @@ WantedBy=multi-user.target
  
 ## 依赖
 0. glibc 2.17+
-1. mysql 5.6+   or MariaDB
+1. mysql 5.6+   or MariaDB   
 2. jdk 1.8  
 3. tomcat 8 
 4. sshfortress
@@ -149,7 +149,17 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 ```
 
 ### mysql 
+`数据库支持自定义配置,可以修改`/etc/ssh/sshd_config`文件，默认连接本机，可配置成其他地址如rds(tomcat连接池也要修改),就不需要安装mysql了`
+```
+....
+sshfortress_host     	localhost
+sshfortress_user 	    audit
+sshfortress_password 	audit
+sshfortress_database 	audit_sec
+sshfortress_port      3306
+.....
 
+```
 *  选项1： 源码编译
 
 ```
