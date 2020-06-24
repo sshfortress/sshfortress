@@ -135,7 +135,16 @@ sshfortress-1.6.1.tar.gz                           09-Jan-2020 15:58     10M
 ```
 
 ### mysql 
-
+Database support custom configuration, you can modify the `/etc/ssh/sshd_config` file, the default connection to this It can be configured to other addresses such as rds (tomcat connection pool should also be modified), so you don't need to install mysql.
+```
+....
+sshfortress_host     	localhost
+sshfortress_user 	    audit
+sshfortress_password 	audit
+sshfortress_database 	audit_sec
+sshfortress_port      3306
+.....
+```
 * option 1： Source compilation
 
 ```
