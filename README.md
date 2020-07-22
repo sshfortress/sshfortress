@@ -2,7 +2,6 @@
 
 [中文](https://github.com/sshfortress/sshfortress/blob/master/zh/README.md)  [English](https://github.com/sshfortress/sshfortress/blob/master/README.md)
 
-Try all SSHfortress features - free for 30 days
 
 We provide community edition, professional edition and education edition, community edition is completely free, [version differences](https://sshfortress.com/en/community.html).
 
