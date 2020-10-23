@@ -233,6 +233,7 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # sed -i 's/192.168.7.3/x.x.x.x/g' /usr/local/tomcat/webapps/greatfortress/common/layui/layui.js
 # /usr/local/tomcat/bin/catalina.sh start
 
+# If tomcat doesn't show the CAPTCHA, you can add it to catalina.sh JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true"
 x.x.x.x Is your listening address
 http://x.x.x.x:8080/greatfortress  
 Account: fortress 
