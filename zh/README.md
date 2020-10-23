@@ -248,6 +248,8 @@ sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 # sed -i 's/192.168.7.3/x.x.x.x/g' /usr/local/tomcat/webapps/greatfortress/common/layui/layui.js
 # /usr/local/tomcat/bin/catalina.sh start
 
+#如果tomcat不显示验证码，可以在catalina.sh中加入JAVA_OPTS="$JAVA_OPTS -Djava.awt.headless=true" 
+
 x.x.x.x 是你的监听地址
 http://x.x.x.x:8080/greatfortress  
 帐号：fortress  密码 hilookhere
