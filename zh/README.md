@@ -307,7 +307,7 @@ ssh today--60@192.168.7.3
 
 ## 演示视频
 **https://sshfortress.com/en/video.html**
-
+![Gif](https://github.com/sshfortress/sshfortress/blob/master/Machine.gif)
 [![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
 ## 如何升级
