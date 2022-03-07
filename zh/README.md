@@ -261,7 +261,7 @@ http://x.x.x.x:8080/greatfortress
 # cd sshfortress-x.x.x
 # ./install.sh
 #setenforce 0 
-`如果系统启用selinux，请关闭它，否则将会引起错误  Could not get shadow information for root`
+`如果系统启用了selinux，请关闭它，否则将会引起错误  Could not get shadow information for root`
 ```
 ## 如何使用
 第一步：
