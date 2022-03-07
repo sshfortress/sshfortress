@@ -245,6 +245,8 @@ After starting tomcat, the first login is a bit slow
 # tar zxvf sshfortress-x.x.x.tar.gz
 # cd sshfortress-x.x.x
 # ./install.sh
+# setenforce 0 
+`If selinux is enabled on the system, you need to disable` 
 ```
 ## How-to-use
 
