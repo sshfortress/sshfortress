@@ -260,7 +260,7 @@ sftp name--ID@x.x.x.
 ```
 ## Video
 **https://sshfortress.com/en/video.html**
-![Gif](https://github.com/sshfortress/sshfortress/blob/master/Machine.gif)
+![Gif](https://raw.githubusercontent.com/sshfortress/sshfortress/master/b.gif)
 [![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
 ## Upgrade
