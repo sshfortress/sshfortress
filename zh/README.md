@@ -1,10 +1,10 @@
 # SSHfortress
 
-[中文](https://github.com/sshfortress/sshfortress/blob/master/zh/README.md)  [English](https://github.com/sshfortress/sshfortress/blob/master/README.md)
+[中文](https://github.com/sshfortress/sshfortress/blob/master/zh/README.md) | [English](https://github.com/sshfortress/sshfortress/blob/master/README.md)
 
 目前市面上存在的大部分堡垒机，要么是做一个Web界面的连接终端，要么就是跳板机再跳一次，试想如果你用的是命令行工具怎么用Web终端，又怎么批量操作使用跳板机，这无疑是多此一举，文件无法互传等其他限制，这也就是sshfortress出现的原因，它不会改变用户原有高效的使用习惯。
 
-`SSHfortress` 代码完全开源 [web前端编程Java+JavaScript语言](https://github.com/sshfortress/greatfortress) [后端编程语言C](https://github.com/sshfortress/sshfortress) 。
+`SSHfortress` 代码完全开源 [web前端编程Java+JavaScript语言](https://github.com/sshfortress/greatfortress) | [后端编程语言C](https://github.com/sshfortress/sshfortress) 。
 
 这个说明是介绍如何安装sshfortress系统，它有一个Web管理界面greatfortress是用java实现的用来可示化的增加账号、资产等功能；后端sshfortress是在openssh的基础上开发的功能，好了往下面看如何安装和配置吧。  
 
@@ -18,8 +18,9 @@
 * [源码编译](#从源码构建sshfortress)
 * [演示视频](#演示视频)
 * [如何使用](#如何使用)
-* [升级](#如何升级)
+* [升级](#如何升级)  
 
+  
 ## 产品简介
 
 sshfortress堡垒机集中了运维身份鉴别、账号管控、系统操作审计等多种功能。基于协议**反向代理**实现，通过**反向代理**的方式实现对 SSH 、SCP 及 SFTP 协议的数据流进行全程记录。统一运维入口，统一用户与主机帐号间的权限关系，防止内部数据泄密。
@@ -338,7 +339,9 @@ ssh today--60@192.168.7.3
 [![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
 ## 如何升级
-sshfortress升级只需要替换掉有变化的文件即可，不需要所有的都升级，通常只需要sshd,ssh文件升级即可，之后重启服务即可。```/etc/init.d/sshd.init restart```
+sshfortress升级只需要替换掉有变化的文件即可，不需要所有的都升级，通常只需要sshd,ssh文件升级即可，之后重启服务即可。```/etc/init.d/sshd.init restart```  
+
+  
 ### QQ交流群  
   
  924072955
