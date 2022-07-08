@@ -4,7 +4,7 @@
 
 目前市面上存在的大部分堡垒机，要么是做一个Web界面的连接终端，要么就是跳板机再跳一次，试想如果你用的是命令行工具怎么用Web终端，又怎么批量操作使用跳板机，这无疑是多此一举，文件无法互传等其他限制，这也就是sshfortress出现的原因，它不会改变用户原有高效的使用习惯。
 
-`SSHfortress` 代码完全开源毫无保留 [前端编程Java语言](https://github.com/sshfortress/greatfortress) [后端编程语言C](https://github.com/sshfortress/sshfortress) 。
+`SSHfortress` 代码完全开源 [web前端编程Java+JavaScript语言](https://github.com/sshfortress/greatfortress) [后端编程语言C](https://github.com/sshfortress/sshfortress) 。
 
 这个说明是介绍如何安装sshfortress系统，它有一个Web管理界面greatfortress是用java实现的用来可示化的增加账号、资产等功能；后端sshfortress是在openssh的基础上开发的功能，好了往下面看如何安装和配置吧。  
 
@@ -15,7 +15,7 @@
 * [注意](#注意)
 * [依赖](#依赖)
 * [安装](#安装)  
-* [源码编译](#源码编译sshfortress)
+* [源码编译](#从源码构建sshfortress)
 * [演示视频](#演示视频)
 * [如何使用](#如何使用)
 * [升级](#如何升级)
@@ -122,7 +122,7 @@ WantedBy=multi-user.target
 3. tomcat 8 
 4. sshfortress （openssl、libiconv、libfuse3、glib-2、libmysqlclient)
 
-## 源码编译sshfortress
+## 从源码构建sshfortress
    sshfortress 源码编译是依赖几个库的，为了方便我把libfuse3、glib-2.0、libcharset静态编译放在static_lib目录中，只需编译下mysql、openssl就可以完成openssh编译，当然你们如果怕加私货也可以自己编译，可以看static_link.sh中如何编译,当然也可以下载编译好的二进制版本。
 
 ```  
@@ -134,11 +134,11 @@ https://www.openssl.org/source
 https://www.mysql.com/downloads/   or   https://mariadb.org/  
 
  `ssl-fips` 编译 openssl-fips-2.0.16.tar.gz    
-    $ ./config ; make; make install  
+    # ./config ; make; make install  
 
  `openssl` 编译 openssl-1.0.1t.tar.gz  
-    $ ./config shared -fPIC
-    $ make depend; make -j4; make install  
+    # ./config shared -fPIC
+    # make depend; make -j4; make install  
 
   
  `mysql` 编译编往下看  
@@ -146,8 +146,8 @@ https://www.mysql.com/downloads/   or   https://mariadb.org/
  
 `openssh` 编译
 
-    $ ./configure --sysconfdir=/etc/ssh --sbindir=/usr/sbin --bindir=/usr/bin --with-ssl-dir=/usr/local/ssl
-    $ make; make install  
+    # ./configure --sysconfdir=/etc/ssh --sbindir=/usr/sbin --bindir=/usr/bin --with-ssl-dir=/usr/local/ssl
+    # make; make install  
 
   
  ```
@@ -339,6 +339,9 @@ ssh today--60@192.168.7.3
 
 ## 如何升级
 sshfortress升级只需要替换掉有变化的文件即可，不需要所有的都升级，通常只需要sshd,ssh文件升级即可，之后重启服务即可。```/etc/init.d/sshd.init restart```
-## QQ交流群
-
+### QQ交流群  
+  
  924072955
+### 参与设计  
+  
+  如果对 sshfortress有改进建议，可以向[sshfortress](https://github.com/sshfortress/sshfortress) 提交 PR 和 ISSUE
