@@ -14,7 +14,8 @@
 * [功能](#功能)
 * [注意](#注意)
 * [依赖](#依赖)
-* [安装](#安装)
+* [安装](#安装)  
+* [源码编译](#源码编译sshfortress)
 * [演示视频](#演示视频)
 * [如何使用](#如何使用)
 * [升级](#如何升级)
@@ -119,10 +120,37 @@ WantedBy=multi-user.target
 1. mysql 5.6+   or MariaDB   
 2. jdk 1.8  
 3. tomcat 8 
-4. sshfortress （openssl、libiconv、libfuse3、glib-2)
+4. sshfortress （openssl、libiconv、libfuse3、glib-2、libmysqlclient)
 
 ## 源码编译sshfortress
+   sshfortress 源码编译是依赖几个库的，为了方便我把libfuse3、glib-2.0、libcharset静态编译放在static_lib目录中，只需编译下mysql、openssl就可以完成openssh编译，当然你们如果怕加私货也可以自己编译，可以看static_link.sh中如何编译,当然也可以下载编译好的二进制版本。
+
+```  
+相关库官方下载地址
+https://github.com/libfuse/libfuse  
+https://download.gnome.org/sources/glib/2.0/  
+https://ftp.gnu.org/pub/gnu/libiconv  
+https://www.openssl.org/source  
+https://www.mysql.com/downloads/   or   https://mariadb.org/  
+
+ `ssl-fips` 编译 openssl-fips-2.0.16.tar.gz    
+    $ ./config ; make; make install  
+
+ `openssl` 编译 openssl-1.0.1t.tar.gz  
+    $ ./config shared -fPIC
+    $ make depend; make -j4; make install  
+
   
+ `mysql` 编译编往下看  
+
+ 
+`openssh` 编译
+
+    $ ./configure --sysconfdir=/etc/ssh --sbindir=/usr/sbin --bindir=/usr/bin --with-ssl-dir=/usr/local/ssl
+    $ make; make install  
+
+  
+ ```
 ## 安装
 进入资源页按需下载即可，https://sshfortress.com/downloads/  或者  https://github.com/sshfortress/sshfortress/releases  进行下载
 ```
