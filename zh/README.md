@@ -124,7 +124,7 @@ WantedBy=multi-user.target
 4. sshfortress （openssl、libiconv、libfuse3、glib-2、libmysqlclient)
 
 ## 从源码构建sshfortress
-   sshfortress 源码编译是依赖几个库的，为了方便我把libfuse3、glib-2.0、libcharset静态编译放在static_lib目录中，只需编译下mysql、openssl就可以完成openssh编译，当然你们如果怕加私货也可以自己编译，可以看static_link.sh中如何编译,当然也可以下载编译好的二进制版本。
+   sshfortress 源码编译是依赖几个库的，为了方便我把libfuse3、glib-2.0、libcharset静态编译放在`static_lib`目录中，只需编译下mysql、openssl就可以完成openssh编译，当然你们如果怕加私货也可以自己编译，可以看`static_link.sh`中如何编译,当然也可以下载编译好的二进制版本。
 
   
 #### 相关库官方下载地址  
