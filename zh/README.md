@@ -4,9 +4,8 @@
 
 目前市面上存在的大部分堡垒机，要么是做一个Web界面的连接终端，要么就是跳板机再跳一次，试想如果你用的是命令行工具怎么用Web终端，又怎么批量操作使用跳板机，这无疑是多此一举，文件无法互传等其他限制，这也就是sshfortress出现的原因，它不会改变用户原有高效的使用习惯。
 
-SSHfortress社区版免费使用。[前端代码完全开源](https://github.com/sshfortress/greatfortress) 如有需要自取即可。
+`SSHfortress` 代码完全开源毫无保留 [前端编程Java语言](https://github.com/sshfortress/greatfortress) [后端编程语言C](https://github.com/sshfortress/sshfortress) 。
 
-另外，我们提供社区版、专业版和教育版，社区版完全免费,用户无须注册和授权文件，[版本区别](https://sshfortress.com/cn/community.html)。
 这个说明是介绍如何安装sshfortress系统，它有一个Web管理界面greatfortress是用java实现的用来可示化的增加账号、资产等功能；后端sshfortress是在openssh的基础上开发的功能，好了往下面看如何安装和配置吧。  
 
 目录
@@ -120,11 +119,10 @@ WantedBy=multi-user.target
 1. mysql 5.6+   or MariaDB   
 2. jdk 1.8  
 3. tomcat 8 
-4. sshfortress
+4. sshfortress （openssl、libiconv、libfuse3、glib-2)
 
-
-
-
+## 源码编译sshfortress
+  
 ## 安装
 进入资源页按需下载即可，https://sshfortress.com/downloads/  或者  https://github.com/sshfortress/sshfortress/releases  进行下载
 ```
