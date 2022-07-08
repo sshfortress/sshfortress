@@ -1,10 +1,10 @@
 # SSHfortress
 
-[中文](https://github.com/sshfortress/sshfortress/blob/master/zh/README.md)  [English](https://github.com/sshfortress/sshfortress/blob/master/README.md)
+[中文](https://github.com/sshfortress/sshfortress/blob/master/zh/README.md) | [English](https://github.com/sshfortress/sshfortress/blob/master/README.md)
 
+Most of the fortresses that exist on the market today either do a web interface to connect to the terminal, or a springboard machine to jump again, imagine if you are using a command line tool how to use a web terminal, and how to batch operations using a springboard machine, which is undoubtedly redundant, files can not be transferred to each other and other restrictions, which is why sshfortress appears, it does not change the user's original efficient use of habits.
 
-We provide community edition, professional edition and education edition, community edition is completely free, [version differences](https://sshfortress.com/en/community.html). 
-In addition, [the frontend code](https://github.com/sshfortress/greatfortress) is fully open source and can be taken if required.  
+`SSHfortress` Code is fully open source, source code from [web front-end programming Java + JavaScript language](https://github.com/sshfortress/greatfortress) | [back-end programming language C](https://github.com/sshfortress/sshfortress) .
 
 
 This description is to introduce how to install the sshfortress system. It has a web management interface, greatfortress, which is implemented in java to visually increase functions such as accounts and assets. The backend sshfortress is a function developed on the basis of openssh. Let's see how to install and configure it.  
@@ -15,7 +15,8 @@ Contents
 * [Features](#Features)
 * [Notice](#Notice)
 * [Depend](#Depend)
-* [Installation](#Installation)
+* [Installation](#Installation)  
+* [Source_code_compilation](#Build)
 * [Video](#Video)
 * [How to use](#How-to-use)
 * [Upgrade](#Upgrade)
@@ -111,7 +112,25 @@ Friendly reminder centos8 starts to enable nftables instead of iptables. If you 
 2. jdk 1.8  
 3. tomcat 8 
 4. sshfortress
-
+## Build  
+ sshfortress source code compilation is dependent on several libraries, for convenience I put libfuse3, glib-2.0, libcharset static compilation in the `static_lib` directory, just compile the mysql, openssl can be completed openssh compilation, of course, if you are afraid to add private goods can also compile their own, you can see how to compile in `static_link.sh`, of course, you can also download the compiled binary version. You can see how to compile it in `static_link.sh`, and of course you can download the compiled binary version.
+#### Related libraries official download address
+https://github.com/libfuse/libfuse  
+https://download.gnome.org/sources/glib/2.0/  
+https://ftp.gnu.org/pub/gnu/libiconv  
+https://www.openssl.org/source  
+https://www.mysql.com/downloads/   or   https://mariadb.org/  
+```
+`ssl-fips` build openssl-fips-2.0.16.tar.gz    
+    # ./config ; make; make install  
+ `openssl` build openssl-1.0.1t.tar.gz  
+    # ./config shared -fPIC
+    # make depend; make -j4; make install  
+ `mysql` There is space below to explain  
+`openssh` build 
+    # ./configure --sysconfdir=/etc/ssh --sbindir=/usr/sbin --bindir=/usr/bin --with-ssl-dir=/usr/local/ssl
+    # make; make install  
+```  
 ## Installation
 Enter the resource page and download as needed, https://sshfortress.com/downloads/ or https://github.com/sshfortress/sshfortress/releases to download
 ```
@@ -265,3 +284,6 @@ sftp name--ID@x.x.x.
 
 ## Upgrade
 The sshfortress upgrade just needs to replace the files with changes, it doesn't need to upgrade all of them, it usually just needs to upgrade the sshd,ssh files and restart the service afterwards. ```/etc/init.d/sshd.init restart```
+### Participation in design  
+
+  If you have suggestions for improving sshfortress or joining us in doing something interesting, you can submit a PR and ISSUE to [sshfortress](https://github.com/sshfortress/sshfortress)
