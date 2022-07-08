@@ -4,8 +4,8 @@
 
 目前市面上存在的大部分堡垒机，要么是做一个Web界面的连接终端，要么就是跳板机再跳一次，试想如果你用的是命令行工具怎么用Web终端，又怎么批量操作使用跳板机，这无疑是多此一举，文件无法互传等其他限制，这也就是sshfortress出现的原因，它不会改变用户原有高效的使用习惯。
 
-`SSHfortress` 代码完全开源 [web前端编程Java+JavaScript语言](https://github.com/sshfortress/greatfortress) | [后端编程语言C](https://github.com/sshfortress/sshfortress) 。
-
+`SSHfortress` 代码完全开源，源码自取 [web前端编程Java+JavaScript语言](https://github.com/sshfortress/greatfortress) | [后端编程语言C](https://github.com/sshfortress/sshfortress) 。
+寻找志同
 这个说明是介绍如何安装sshfortress系统，它有一个Web管理界面greatfortress是用java实现的用来可示化的增加账号、资产等功能；后端sshfortress是在openssh的基础上开发的功能，好了往下面看如何安装和配置吧。  
 
 目录
@@ -126,14 +126,14 @@ WantedBy=multi-user.target
 ## 从源码构建sshfortress
    sshfortress 源码编译是依赖几个库的，为了方便我把libfuse3、glib-2.0、libcharset静态编译放在static_lib目录中，只需编译下mysql、openssl就可以完成openssh编译，当然你们如果怕加私货也可以自己编译，可以看static_link.sh中如何编译,当然也可以下载编译好的二进制版本。
 
-```  
-相关库官方下载地址
+  
+#### 相关库官方下载地址  
 https://github.com/libfuse/libfuse  
 https://download.gnome.org/sources/glib/2.0/  
 https://ftp.gnu.org/pub/gnu/libiconv  
 https://www.openssl.org/source  
 https://www.mysql.com/downloads/   or   https://mariadb.org/  
-
+```
  `ssl-fips` 编译 openssl-fips-2.0.16.tar.gz    
     # ./config ; make; make install  
 
@@ -347,4 +347,4 @@ sshfortress升级只需要替换掉有变化的文件即可，不需要所有的
  924072955
 ### 参与设计  
   
-  如果对 sshfortress有改进建议，可以向[sshfortress](https://github.com/sshfortress/sshfortress) 提交 PR 和 ISSUE
+  如果对 sshfortress有改进建议或者加入我们一起做有意思的事，可以向[sshfortress](https://github.com/sshfortress/sshfortress) 提交 PR 和 ISSUE
