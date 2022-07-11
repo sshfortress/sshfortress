@@ -347,4 +347,6 @@ sshfortress升级只需要替换掉有变化的文件即可，不需要所有的
  924072955
 ### 参与设计  
   
-  如果对 sshfortress有改进建议或者加入我们一起做有意思的事，可以向[sshfortress](https://github.com/sshfortress/sshfortress) 提交 PR 和 ISSUE
+  如果对sshfortress有改进建议，可以向[sshfortress](https://github.com/sshfortress/sshfortress) 提交 PR 和 ISSUE  
+
+  或者加入我们一起完善它！
