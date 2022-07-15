@@ -24,7 +24,7 @@
 ## 产品简介
 
 sshfortress堡垒机集中了运维身份鉴别、账号管控、系统操作审计等多种功能。基于协议**反向代理**实现，通过**反向代理**的方式实现对 SSH 、SCP 及 SFTP 协议的数据流进行全程记录。统一运维入口，统一用户与主机帐号间的权限关系，防止内部数据泄密。
-![Comparison chart](https://github.com/limithit/pic/blob/master/zh/Comparison%20chart.jpg)
+![Comparison chart](https://github.com/limithit/pic/blob/main/zh/Comparison%20chart.jpg)
 
 
 ## 功能
@@ -293,22 +293,22 @@ http://x.x.x.x:8080/greatfortress
 第一步：
 建立资产
 
-![1](https://github.com/sshfortress/sshfortress/blob/master/zh/1.png)
+![1](https://github.com/limithit/pic/blob/main/zh/1.png)
 
 第二步：
 录入服务器的账号和密码，可以多个，如root tomcat test用户
 
-![2](https://github.com/sshfortress/sshfortress/blob/master/zh/2.jpg)
+![2](https://github.com/limithit/pic/blob/main/zh/2.jpg)
 
 第三步：
 建立资产组勾选即可
 
-![3](https://github.com/sshfortress/sshfortress/blob/master/zh/3.jpg)
+![3](https://github.com/limithit/pic/blob/main/zh/3.jpg)
 
 第四步：
 建立SSH授权账号
 
-![4](https://github.com/sshfortress/sshfortress/blob/master/zh/4.jpg)
+![4](https://github.com/limithit/pic/blob/main/zh/4.jpg)
 
 
 登录名加两个减号加资产ID，
@@ -336,7 +336,7 @@ ssh today--60@192.168.7.3
 ## 演示视频
 **https://sshfortress.com/en/video.html**
 ![Gif](https://raw.githubusercontent.com/limithit/pic/master/b.gif)
-[![Demo Video](https://github.com/limithit/pic/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
+[![Demo Video](https://github.com/limithit/pic/blob/main/video.jpg)](https://sshfortress.com/en/video.html)
 
 ## 如何升级
 sshfortress升级只需要替换掉有变化的文件即可，不需要所有的都升级，通常只需要sshd,ssh文件升级即可，之后重启服务即可。```/etc/init.d/sshd.init restart```  
