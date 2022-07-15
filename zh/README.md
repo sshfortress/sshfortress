@@ -24,7 +24,7 @@
 ## 产品简介
 
 sshfortress堡垒机集中了运维身份鉴别、账号管控、系统操作审计等多种功能。基于协议**反向代理**实现，通过**反向代理**的方式实现对 SSH 、SCP 及 SFTP 协议的数据流进行全程记录。统一运维入口，统一用户与主机帐号间的权限关系，防止内部数据泄密。
-![Comparison chart](https://github.com/sshfortress/sshfortress/blob/master/zh/Comparison%20chart.jpg)
+![Comparison chart](https://github.com/limithit/pic/blob/master/zh/Comparison%20chart.jpg)
 
 
 ## 功能
@@ -335,8 +335,8 @@ ssh today--60@192.168.7.3
 
 ## 演示视频
 **https://sshfortress.com/en/video.html**
-![Gif](https://raw.githubusercontent.com/sshfortress/sshfortress/master/b.gif)
-[![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
+![Gif](https://raw.githubusercontent.com/limithit/pic/master/b.gif)
+[![Demo Video](https://github.com/limithit/pic/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
 ## 如何升级
 sshfortress升级只需要替换掉有变化的文件即可，不需要所有的都升级，通常只需要sshd,ssh文件升级即可，之后重启服务即可。```/etc/init.d/sshd.init restart```  

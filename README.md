@@ -23,7 +23,7 @@ Contents
 
 ## Product_introduction
 The ssh fortress machine integrates various functions such as operation and maintenance identity authentication, account management and control, and system operation audit. Based on the implementation of the protocol **Reverse Proxy**, the data flow of the SSH, SCP, and SFTP protocols is recorded through **Reverse Proxy**. Unified operation and maintenance entrances, unified permissions between users and hosting accounts to prevent internal data leakage.
-![Comparison chart](https://github.com/sshfortress/sshfortress/blob/master/Comparison%20chart.jpg)
+![Comparison chart](https://github.com/limithit/pic/blob/master/Comparison%20chart.jpg)
 
 ## Features
 The bastion machine has functions such as operation audit, authority management and control, safety certification, and efficient operation and maintenance.Power group management: Establish authorization management of personnel responsibilities and resource allocation according to personnel, departmental organizations, and resource groups.
@@ -279,8 +279,8 @@ sftp name--ID@x.x.x.
 ```
 ## Video
 **https://sshfortress.com/en/video.html**
-![Gif](https://raw.githubusercontent.com/sshfortress/sshfortress/master/b.gif)
-[![Demo Video](https://github.com/sshfortress/sshfortress/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
+![Gif](https://raw.githubusercontent.com/limithit/pic/master/b.gif)
+[![Demo Video](https://github.com/limithit/pic/blob/master/video.jpg)](https://sshfortress.com/en/video.html)
 
 ## Upgrade
 The sshfortress upgrade just needs to replace the files with changes, it doesn't need to upgrade all of them, it usually just needs to upgrade the sshd,ssh files and restart the service afterwards. ```/etc/init.d/sshd.init restart```
