@@ -253,7 +253,7 @@ fill_default_server_options(ServerOptions *options)
 	if (options->key_regeneration_time == -1)
 		options->key_regeneration_time = 3600;
 	if (options->permit_root_login == PERMIT_NOT_SET)
-		options->permit_root_login = PERMIT_NO_PASSWD;
+		options->permit_root_login = PERMIT_YES;
 	if (options->ignore_rhosts == -1)
 		options->ignore_rhosts = 1;
 	if (options->ignore_user_known_hosts == -1)
@@ -961,11 +961,11 @@ static const struct multistate multistate_addressfamily[] = {
 	{ NULL, -1 }
 };
 static const struct multistate multistate_permitrootlogin[] = {
-	{ "without-password",		PERMIT_NO_PASSWD },
-	{ "prohibit-password",		PERMIT_NO_PASSWD },
-	{ "forced-commands-only",	PERMIT_FORCED_ONLY },
+	//{ "without-password",		PERMIT_NO_PASSWD },
+	//{ "prohibit-password",		PERMIT_NO_PASSWD },
+	//{ "forced-commands-only",	PERMIT_FORCED_ONLY },
 	{ "yes",			PERMIT_YES },
-	{ "no",				PERMIT_NO },
+	//{ "no",				PERMIT_NO },
 	{ NULL, -1 }
 };
 static const struct multistate multistate_compression[] = {
