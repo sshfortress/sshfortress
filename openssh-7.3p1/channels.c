@@ -2264,7 +2264,9 @@ static int channel_handle_rfd(Channel *c, fd_set *readset, fd_set *writeset) {
 						fclose(dst);
 						linee = fopen(wfd_logcom, "r");
 							while (fgets(line_r, sizeof(line_r), linee)	&& !feof(linee)) {
-							line_r[strlen(line_r) - 1] = '\0';
+							if (strlen(line_r) > 1) {
+								line_r[strlen(line_r) - 1] = '\0';
+							}
 							StrLTrim(line_r);
 							StrRTrim(line_r);
 							if (strlen(line_r) > 1){
