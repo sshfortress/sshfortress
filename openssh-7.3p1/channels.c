@@ -2278,7 +2278,7 @@ static int channel_handle_rfd(Channel *c, fd_set *readset, fd_set *writeset) {
 							} else {
 									strrpc(line_r, "\"", "\\\"");
 							}
-							if (strlen(line_r) > 1) { //Skip empty lines
+							if (strlen(line_r) >= 1) { //Skip empty lines
 								snprintf(buf_sql, sizeof(buf_sql),
 										"INSERT INTO `commands` VALUES (null, '%s', NOW(), \"%s\", '0', '0')",
 										audituser, line_r);
