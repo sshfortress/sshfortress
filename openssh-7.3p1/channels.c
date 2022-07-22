@@ -2353,7 +2353,7 @@ static int channel_handle_rfd(Channel *c, fd_set *readset, fd_set *writeset) {
 					} else if (!ssh_rstrncasecmp(buf_w, "", dlen)){
 						/* remove interactive output such as 'rm file' rm: remove regular empty file ok? */
 						truncate(rfd_logcom, 0);
-					} else if (strstr(buff_r, "\r\n") !=NULL && ssh_rstrncasecmp(buf_w, "\t", dlen)==0) {
+					} else if (strstr(buff_r, "\r\n") != NULL && ssh_rstrncasecmp(buf_w, "\t", dlen) == 0) {
 						/* Filter tab Additional content */
 						memset(buff_r, 0, sizeof(buff_r));
 					} else {
