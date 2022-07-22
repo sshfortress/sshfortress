@@ -2353,6 +2353,9 @@ static int channel_handle_rfd(Channel *c, fd_set *readset, fd_set *writeset) {
 					} else if (!ssh_rstrncasecmp(buf_w, "", dlen)){
 						/* remove interactive output such as 'rm file' rm: remove regular empty file ok? */
 						truncate(rfd_logcom, 0);
+					} else if (strstr(buff_r, "\r\n") !=NULL && ssh_rstrncasecmp(buf_w, "\t", dlen)==0) {
+						/* Filter tab Additional content */
+						memset(buff_r, 0, sizeof(buff_r));
 					} else {
 						write(rfd_comd, buff_r, len);
 					}
@@ -2362,6 +2365,10 @@ static int channel_handle_rfd(Channel *c, fd_set *readset, fd_set *writeset) {
 			buffer_append(&c->input, buf, len);
 		}
 	}
+		free(out);
+		free(out_mode);
+		free(out_col);
+		free(out_size);
 	return 1;
 }
 
