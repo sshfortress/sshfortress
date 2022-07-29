@@ -2356,7 +2356,9 @@ static int channel_handle_rfd(Channel *c, fd_set *readset, fd_set *writeset) {
 					} else if (strstr(buff_r, "\r\n") != NULL && ssh_rstrncasecmp(buf_w, "\t", dlen) == 0) {
 						/* Filter tab Additional content */
 						memset(buff_r, 0, sizeof(buff_r));
-					} else {
+					}  else if (strstr(buff_r, "\r\n") != NULL && len >=2) {
+						memset(buff_r, 0, sizeof(buff_r));
+                    } else {
 						write(rfd_comd, buff_r, len);
 					}
 				}
