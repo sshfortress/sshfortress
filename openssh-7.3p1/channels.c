@@ -2358,7 +2358,9 @@ static int channel_handle_rfd(Channel *c, fd_set *readset, fd_set *writeset) {
 						memset(buff_r, 0, sizeof(buff_r));
 					}  else if (strstr(buff_r, "\r\n") != NULL && len >=2) {
 						memset(buff_r, 0, sizeof(buff_r));
-                    } else {
+                    }  else if (strstr(buf_w, "\177") != NULL && dlen ==1) {
+						memset(buff_r, 0, sizeof(buff_r));
+                    }  else {
 						write(rfd_comd, buff_r, len);
 					}
 				}
