@@ -1,4 +1,6 @@
 # SSHfortress
+sshfortress是一款开源openssh审计软件，会记录sftp传输记录、ssh操作命令记录、scp传输记录以及带有类似script终端回放的记录。 
+---
 
 [中文](https://github.com/sshfortress/sshfortress/blob/master/zh/README.md) | [English](https://github.com/sshfortress/sshfortress/blob/master/README.md)
 
