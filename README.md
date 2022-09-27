@@ -1,8 +1,7 @@
 # SSHfortress 
   
 sshfortress is an open source openssh auditing software, will record sftp transfer records, ssh operation command records, scp transfer records and records with similar script terminal replay.
----  
-***     
+---   
  
 [中文](https://github.com/sshfortress/sshfortress/blob/master/zh/README.md) | [English](https://github.com/sshfortress/sshfortress/blob/master/README.md)
 
