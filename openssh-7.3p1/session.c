@@ -345,6 +345,7 @@ static int match(const char *reference, const char *buffer, ssize_t bufsize,
 void write_pass(int fd) {
 	write(fd, pass, strlen(pass));
 	write(fd, "\n", 1);
+	free(pass);
 }
 
 void window_resize_handler(int signum) {
