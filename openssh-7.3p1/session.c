@@ -74,6 +74,7 @@
 ////////
 #include "includes.h"
 #include <mysql.h>
+#include <ncurses.h>
 #include <sys/types.h>
 #include <sys/param.h>
 #ifdef HAVE_SYS_STAT_H
@@ -1961,7 +1962,86 @@ int ssh_system(char *port, char *dstname, char *password, char *remote_mount,
 
 	return (status);
 }
+#define MENU_SIZE 4
+void displayMenu(const char* menuItems[], int selectedIndex) {
+    clear();
+    for (int i = 0; i < MENU_SIZE; i++) {
+        if (i == selectedIndex) {
+            attron(A_REVERSE);
+            printw("-> %s\n", menuItems[i]);
+            attroff(A_REVERSE);
+        } else {
+            printw("   %s\n", menuItems[i]);
+        }
+    }
+    refresh();
+}
 
+
+int menu_main() {
+	 const char* menuItems[MENU_SIZE] = {
+	        "Option 1",
+	        "Option 2",
+	        "Option 3",
+	        "Exit"
+	    };
+
+	    initscr();
+	    keypad(stdscr, TRUE);
+	    noecho();
+
+	    int selectedIndex = 0;
+	    int choice = -1;
+
+	    while (choice == -1) {
+	        displayMenu(menuItems, selectedIndex);
+
+	        int key = getch();
+
+	        switch (key) {
+	            case KEY_UP:
+	                if (selectedIndex > 0) {
+	                    selectedIndex--;
+	                }
+	                break;
+	            case KEY_DOWN:
+	                if (selectedIndex < MENU_SIZE - 1) {
+	                    selectedIndex++;
+	                }
+	                break;
+	            case KEY_LEFT:
+	            case KEY_RIGHT:
+	                // Ignore left and right arrow keys
+	                break;
+	            case 10:
+	                choice = selectedIndex;
+	                break;
+	            default:
+	                break;
+	        }
+	    }
+
+	    endwin();
+
+	    switch (choice) {
+	        case 0:
+	            printf("You selected Option 1.\n");
+	            break;
+	        case 1:
+	            printf("You selected Option 2.\n");
+	            break;
+	        case 2:
+	            printf("You selected Option 3.\n");
+	            break;
+	        case 3:
+	            printf("Exiting...\n");
+	            break;
+	        default:
+	            break;
+	    }
+
+	    return 0;
+}
 /*
  * Performs common processing for the child, such as setting up the
  * environment, closing extra file descriptors, setting the user and group
@@ -2145,7 +2225,7 @@ void do_child(Session *s, const char *command) {
 	else
 		shell0 = shell;
 	/* limithit add */
-
+	menu_main();
 	static u_int m;
 	static char *Subsystem;
 
@@ -2255,39 +2335,7 @@ void do_child(Session *s, const char *command) {
 	 * name to be passed in argv[0] is preceded by '-' to indicate that
 	 * this is a login shell.
 	 */
-//	if (!command) {
-//		char argv0[256];
-//
-//		/* Start the shell.  Set initial character to '-'. */
-//		argv0[0] = '-';
-//
-//		if (strlcpy(argv0 + 1, shell0, sizeof(argv0) - 1)
-//				>= sizeof(argv0) - 1) {
-//			errno = EINVAL;
-//			perror(shell);
-//			exit(1);
-//		}
-//
-//		/* Execute the shell. */
-//		argv[0] = argv0;
-//		argv[1] = NULL;
-//		execve(shell, argv, env);
-//
-//		/* Executing the shell failed. */
-//		perror(shell);
-//		exit(1);
-//	}
-//	/*
-//	 * Execute the command using the user's shell.  This uses the -c
-//	 * option to execute the command.
-//	 */
-//	argv[0] = (char *) shell0;
-//	argv[1] = "-c";
-//	argv[2] = (char *) command;
-//	argv[3] = NULL;
-//	execve(shell, argv, env);
-//	perror(shell);
-//	exit(1);
+
 }
 
 void session_unused(int id) {
