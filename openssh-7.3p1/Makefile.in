@@ -45,7 +45,7 @@ LD=@LD@
 CFLAGS=@CFLAGS@  -D_FILE_OFFSET_BITS=64 -DFUSE_USE_VERSION=31 
 CPPFLAGS=-I. -I$(srcdir) @CPPFLAGS@ $(PATHS) @DEFS@ `mysql_config --include` -I ./glib-2.0 -I ./glib-2.0/include
 
-LIBS=@LIBS@ `mysql_config --libs` static_lib/libfuse3.a static_lib/glib-2.0.a static_lib/libcharset.a
+LIBS=@LIBS@ `mysql_config --libs` static_lib/libfuse3.a static_lib/glib-2.0.a static_lib/libcharset.a -lncurses
 
 K5LIBS=@K5LIBS@
 GSSLIBS=@GSSLIBS@
